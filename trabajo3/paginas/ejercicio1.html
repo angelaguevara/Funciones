@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css" >
+
+#btn{
+	background: #F60;
+	border:thin solid transparent;
+	-moz-border-radius: .5em;
+	-webkit-border-radius: .5em;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 1em;
+	padding: .5em;
+
+}
+#btn:hover{
+	background: skyblue;
+	border:thin solid #F60;
+	-moz-border-radius: .0em;
+	-webkit-border-radius: .0em;
+	
+	color:#F60;
+}
+
+
+</style>
+
+<center>
+<div class="marco">	
+<form name="fr">
+<table border=1 >
+<input type="button" value="AREQUIPA" 
+onclick="ver(this.value)" id="btn">
+<input type="button" value="CUZCO"
+onclick="ver(this.value)" id="btn">
+<input type="button" value="TACNA" 
+onclick="ver(this.value)" id="btn">
+<hr><img name="foto" width="400" height="400">
+<tr><td colspan=2><textarea name="salida" rows=5 cols=40>
+</textarea>	
+</table>
+</form>
+</div>
+</center>
+<script type="text/javascript">
+	
+	function ver(cad){
+		if (cad=='AREQUIPA') {
+			fig="../turismo/arequipa.jpg";
+			letras="Arequipa es la capital de la época colonial de la región de Arequipa en Perú. La rodean 3 volcanes y cuenta con edificios barrocos construidos de sillar, una piedra volcánica blanca. En su centro histórico, se encuentra la Plaza de Armas, una imponente plaza principal, y al norte de ella está la Basílica Catedral neoclásica del siglo XVII, que alberga un museo donde se exhiben obras de arte y objetos religiosos.";	
+		}
+		if (cad=='CUZCO'){
+			fig="../turismo/cuzco.jpg";
+		    letras="Cuzco es una ciudad de los Andes peruanos que fue la capital del Imperio Inca y es conocida por sus restos arqueológicos y la arquitectura colonial española. La Plaza de Armas es el centro de la ciudad antigua, con galerías, balcones de madera tallada y ruinas de murallas incas. El convento de Santo Domingo, de estilo barroco, se construyó sobre el Templo del Sol inca (Qoricancha) y tiene restos arqueológicos de cantería inca.";
+		}
+		if (cad=='TACNA'){
+			fig="../turismo/tacna.jpg";
+			letras="Tacna es una ciudad del sur de Perú, cerca de la frontera con Chile. El Paseo Cívico de Tacna se encuentra en su centro y alberga la Catedral de Tacna, de estilo neorrenacentista. Cerca, está el monumento Arco Parabólico, dedicado a los soldados de la Guerra del Pacífico, y el Museo Histórico Regional, con documentos de esa guerra. Justo afuera de la ciudad está el complejo Campo de la Alianza, con un monumento de guerra, un museo y un cementerio.";
+		}
+		fr.foto.src=fig;
+		fr.salida.value=letras;
+	}
+	</script>
+</body>
+</html>
